@@ -227,7 +227,7 @@ abstract class Parser implements ParserInterface
 
         if ($item->getPublishedDate() === null) {
             // Use the updated date if available, otherwise use the feed date
-            $item->setPublishedDate($item->getUpdatedDate() ?: $feed->getDate());
+            $item->setPublishedDate($item->getUpdatedDate() ?? null);
         }
 
         if ($item->getUpdatedDate() === null) {

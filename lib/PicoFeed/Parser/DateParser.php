@@ -67,6 +67,10 @@ class DateParser extends Base
     {
         $value = trim($value);
 
+        $time = @strtotime($value);
+        if($time) {
+            return new DateTime('@'.$time);
+        }
         foreach ($this->formats as $format => $length) {
             $truncated_value = $value;
             if ($length !== null) {
@@ -78,8 +82,7 @@ class DateParser extends Base
                 return $date;
             }
         }
-
-        return $this->getCurrentDateTime();
+        return null;	// Return null if all fails
     }
 
     /**
