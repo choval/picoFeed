@@ -1,5 +1,5 @@
 {
-    "name": "miniflux/picofeed",
+    "name": "choval/picofeed",
     "description": "Modern library to handle RSS/Atom feeds",
     "homepage": "https://github.com/miniflux/picoFeed",
     "type": "library",
