@@ -178,7 +178,8 @@ class Item
 
         $categoryString = $this->categories != null ? implode(',', $this->categories) : null;
 
-        $output .= 'Item::date = '.$this->date->format(DATE_RFC822).PHP_EOL;
+        if($this->date)
+            $output .= 'Item::date = '.$this->date->format(DATE_RFC822).PHP_EOL;
         $output .= 'Item::publishedDate = '.$publishedDate.PHP_EOL;
         $output .= 'Item::updatedDate = '.$updatedDate.PHP_EOL;
         $output .= 'Item::isRTL() = '.($this->isRTL() ? 'true' : 'false').PHP_EOL;

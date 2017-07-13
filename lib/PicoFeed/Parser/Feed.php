@@ -91,8 +91,8 @@ class Feed
             $output .= 'Feed::'.$property.' = '.$this->$property.PHP_EOL;
         }
 
-		if($this->date)
-			$output .= 'Feed::date = '.$this->date->format(DATE_RFC822).PHP_EOL;
+        if($this->date)
+            $output .= 'Feed::date = '.$this->date->format(DATE_RFC822).PHP_EOL;
         $output .= 'Feed::isRTL() = '.($this->isRTL() ? 'true' : 'false').PHP_EOL;
         $output .= 'Feed::items = '.count($this->items).' items'.PHP_EOL;
 
